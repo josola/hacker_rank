@@ -170,15 +170,14 @@ int main()
 }
 ```
 
-IMPORTANT: This one is not a guideline, this one is an immutable rule. Never use ``using namespace std``. Instead, use ``using`` statements for individual libraries included within your source file. This keeps code clean and adds granularity to namespace usage throughout the source.
-Why: Using a blanket ``using namespace std`` obfuscates the code you have written in the eyes of future readers. The ``std`` namespace includes a lot of algorithms and methods within C++. It becomes extremely hard to identify whether a method is written by hand, and by you, or whether it is included in the Standard Template (STL) library.
+IMPORTANT: This one is not a guideline, this one is an immutable rule. Never use ``using namespace std`` in global scope in a header file.
+Why: Using a blanket ``using namespace std`` messes with an ``#include`` directive's ability to parse information in an effective manner.
 
 Yes:
 ```c++
-#include <iostream> // std::cout std::cin
+// file foo.h
 
-using std::cout;
-using std::cin;
+#include <iostream>
 
 int main()
 {
@@ -189,6 +188,8 @@ return 0;
 
 No:
 ```c++
+// file foo.h
+
 #include <iostream>
 #include <numeric>
 #include <vector>
@@ -196,11 +197,35 @@ No:
 
 using namespace std;
 
-int main()
+int Function()
 {
 ...
-    return 0;
 }
+```
+
+Practice: Use ``#include`` guards in all .h (header) files. Do not use ``#pragma once``.
+Why: Avoid duplicate inclusion of files. It is implementation specific, some compilers do not support it, and it does not port well.
+
+Yes:
+```c++
+// file foo.h
+#ifndef FOO_H
+#define FOO_H
+// ... declarations ...
+#endif // FOO_H
+```
+
+No:
+```c++
+// file foo.h
+// ... declarations ...
+```
+
+Also No:
+```c++
+// file foo.h
+#pragma once
+// ... declarations ...
 ```
 
 Try to initialize your variables before they are used. Do not leave them holding garbage values within memory.
