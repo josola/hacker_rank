@@ -1,6 +1,6 @@
 # Style Guide
 
-Things may start simple but can get overly complicated if some restrictions are put into place. It is suggested that you investigate this document before writing any code.
+Things may start simple but can get overly complicated if some restrictions aren't put into place. Please read through this document before contributing.
 
 ## Banners
 
