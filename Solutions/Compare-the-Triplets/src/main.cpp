@@ -11,10 +11,13 @@
 
 using std::cin;
 using std::cout;
+using std::endl;
 using std::vector;
 
 int main()
 {
+    // Set up triplets.
+
     vector<int> triplet_a;
 
     for (int i = 0; i < 3; i++)
@@ -33,6 +36,8 @@ int main()
         triplet_b.push_back(hold);
     }
 
+    // Determine scores.
+
     int score_a = 0;
     int score_b = 0;
 
@@ -48,7 +53,9 @@ int main()
         }
     }
 
-    cout << score_a << ' ' << score_b << '\n';
+    // Finishing things up.
+
+    cout << score_a << ' ' << score_b << endl;
 
     return 0;
 }
