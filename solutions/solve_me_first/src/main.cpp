@@ -1,15 +1,9 @@
-/* Solutions\Solve-Me-First\src\main.cpp
- * Complete the function to return the sum of two integers.
- *
- * (c) 202-2021 Jordan Sola
- * Written by Jordan Sola
- */
+/* solutions/solve_me_first/src/main.cpp
+ * Solve me first.
+ * (c) Jordan Sola 2021
+ * Written by Jordan Sola 2021 */
 
 #include <iostream>
-
-using std::cin;
-using std::cout;
-using std::endl;
 
 int main()
 {
@@ -17,7 +11,7 @@ int main()
 
 	int num_a = 0, num_b = 0;
 
-	cin >> num_a >> num_b;
+	std::cin >> num_a >> num_b;
 
 	// Sum the numbers.
 
@@ -25,7 +19,7 @@ int main()
 
 	// Finishing things up.
 
-	cout << sum << endl;
+	std::cout << sum << std::endl;
 
 	return 0;
 }
