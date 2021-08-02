@@ -1,38 +1,29 @@
-/* Solutions\Diagonal-Difference\src\main.cpp
- * Calculates the difference between the
- * sums of two diagonals within a 2D matrix.
- *
- * (c) 2020-2021 Jordan sola
- * Written by Jordan Sola
- */
+/* solutions/diagonal_difference/src/main.cpp
+ * Diagonal Difference.
+ * (c) Jordan Sola 2021
+ * Written by Jordan Sola 2021 */
 
 #include <iostream>
 #include <vector>
 #include <cmath>
 
-using std::abs;
-using std::cin;
-using std::cout;
-using std::endl;
-using std::vector;
-
 int main()
 {
     int height = 0;
-    cin >> height;
+    std::cin >> height;
 
     const int x = height;
     const int y = height;
 
-    vector<vector<int> > container;
+    std::vector<std::vector<int> > container;
 
     for (int i = 0; i < y; i++)
     {
-        vector<int> row;
+        std::vector<int> row;
         for (int j = 0; j < x; j++)
         {
             int hold = 0;
-            cin >> hold;
+            std::cin >> hold;
             row.push_back(hold);
         }
         container.push_back(row);
@@ -62,7 +53,7 @@ int main()
 
     int absolute_difference = diagonal_a_sum - diagonal_b_sum;
 
-    cout << abs(absolute_difference) << endl;
+    std::cout << abs(absolute_difference) << std::endl;
 
     return 0;
 }
