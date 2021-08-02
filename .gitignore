@@ -51,3 +51,6 @@
 
 # directories
 bin/
+
+# Residual
+*.DS_Store
