@@ -1,38 +1,30 @@
-/* Solutions\Compare-the-Triplets\src\main.cpp
- * Compare the elements of two size 3 arrays and print the number
- * of higher values between the arrays when compared to each other.
- * 
- * (c) 2020-2021 Jordan Sola
- * Written by Jordan Sola
- */
+/* solutions/compare_the_triplets/src/main.cpp
+ * Compare the triplets.
+ * (c) Jordan Sola 2021
+ * Written by Jordan Sola 2021 */
 
 #include <iostream>
 #include <vector>
-
-using std::cin;
-using std::cout;
-using std::endl;
-using std::vector;
 
 int main()
 {
     // Set up triplets.
 
-    vector<int> triplet_a;
+    std::vector<int> triplet_a;
 
     for (int i = 0; i < 3; i++)
     {
         int hold = 0;
-        cin >> hold;
+        std::cin >> hold;
         triplet_a.push_back(hold);
     }
 
-    vector<int> triplet_b;
+    std::vector<int> triplet_b;
 
     for (int i = 0; i < 3; i++)
     {
         int hold = 0;
-        cin >> hold;
+        std::cin >> hold;
         triplet_b.push_back(hold);
     }
 
@@ -55,7 +47,7 @@ int main()
 
     // Finishing things up.
 
-    cout << score_a << ' ' << score_b << endl;
+    std::cout << score_a << ' ' << score_b << std::endl;
 
     return 0;
 }
