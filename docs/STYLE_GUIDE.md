@@ -7,15 +7,22 @@ project
 |   .gitignore
 |   LICENSE
 |   README.md
-| 
-└───bin
-|   |   executables
 |
 └───docs
 |   |   documentation
 |
-└───src
-    |   source_files
+└───solutions
+    |
+    └───solution
+        |
+        └───src
+        |   |   source files
+        |
+        └───bin
+        |   |   binaries
+        |
+        └───docs
+            |   documentation
 ```
 
 ### The main point of entry source file should be named ```main```, regardless of file type.
