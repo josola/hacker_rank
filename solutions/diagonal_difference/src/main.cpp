@@ -24,7 +24,7 @@ int main()
     const int x = height;
     const int y = height;
 
-    vector<vector<int>> container;
+    vector<vector<int> > container;
 
     for (int i = 0; i < y; i++)
     {
