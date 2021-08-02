@@ -1,19 +1,11 @@
-/* Solutions\Simple-Array-Sum\src\main.cpp
- * Given an array of integers, find the sum of its contents.
- *
- * (c) 2020-2021 Jordan Sola
- * Written by Jordan Sola
- */
+/* fsolutions/simple_array_sum/src/main.cpp
+ * Simple array sum.
+ * (c) Jordan Sola 2021
+ * Written by Jordan Sola 2021 */
 
 #include <iostream>
 #include <vector>
 #include <numeric>
-
-using std::accumulate;
-using std::cin;
-using std::cout;
-using std::endl;
-using std::vector;
 
 int main()
 {
@@ -21,14 +13,14 @@ int main()
 
 	unsigned long int size = 0;
 
-	cin >> size;
+	std::cin >> size;
 
-	vector<int> container;
+	std::vector<int> container;
 
 	for (int i = 0; i < size; i++)
 	{
 		int num = 0;
-		cin >> num;
+		std::cin >> num;
 		container.push_back(num);
 	}
 
@@ -38,7 +30,7 @@ int main()
 
 	// Finishing things up.
 
-	cout << sum << endl;
+	std::cout << sum << std::endl;
 
 	return 0;
 }
